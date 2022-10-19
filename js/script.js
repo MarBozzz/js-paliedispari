@@ -16,7 +16,7 @@ function palindromi() {
   }
   return document.querySelector('.palindromo').innerHTML = 'è palindromo'; //true
 }
-//console.log(palindromi(getWord));
+console.log(palindromi(getWord));
 
 
 
