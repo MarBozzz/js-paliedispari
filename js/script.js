@@ -2,7 +2,7 @@
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma*/
 
-
+/*
 const getWord = prompt('Digita una parola');
 
 function palindromi() {
@@ -17,7 +17,7 @@ function palindromi() {
   return document.querySelector('.palindromo').innerHTML = 'è palindromo'; //true
 }
 console.log(palindromi(getWord));
-
+*/
 
 
 
@@ -28,35 +28,49 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.*/
 
-/*
-let pariODispari = false;
+
+let pariODispari = true;
 let outputPoD;
 
 const getEvenOrOdd = prompt('Scegli pari o dispari');
 document.querySelector('.even-odd').innerHTML = `Hai scelto: ${getEvenOrOdd}`;
 
-const getNumber = parseInt(prompt('Digita un numero'));
+const getNumber = parseInt(prompt('Digita un numero da 1 a 5'));
 document.querySelector('.your-number').innerHTML = `Il tuo numero è: ${getNumber}`;
 
-let generatedNumber = Math.floor(Math.random() * (5-0)+1)+0;
-document.querySelector('.computer-number').innerHTML = `Il numero del computer è: ${generatedNumber}`;
+let generatedNumber;
+function randomByComp(){
+  generatedNumber = Math.floor(Math.random() * (5-1)+1)+1;
+  return document.querySelector('.computer-number').innerHTML = `Il numero del computer è: ${generatedNumber}`;
+}
+console.log(randomByComp(generatedNumber));
+//let generatedNumber = Math.floor(Math.random() * (5-1)+1)+1;
+//document.querySelector('.computer-number').innerHTML = `Il numero del computer è: ${generatedNumber}`;
 
 let somma = getNumber + generatedNumber;
-document.querySelector('.sum').innerHTML = `Il totale fa: ${somma}, che è `;
+document.querySelector('.sum').innerHTML = `Il totale fa: ${somma}`;
 
 
-if (!(somma % 2)) {
+function Evenodd(){
+  if (!(somma % 2)) {
+    pariODispari = false;
+    outputPoD = document.querySelector('.result').innerHTML = 'pari';
+  } else {
+    outputPoD = document.querySelector('.result').innerHTML = 'dispari';
+  }
+}
+console.log(pariODispari);
+/*if (!(somma % 2)) {
   pariODispari = true;
   outputPoD = document.querySelector('.result').innerHTML = 'pari';
 } else {
   outputPoD = document.querySelector('.result').innerHTML = 'dispari';
-}
-console.log(pariODispari);
+}*/
 
 if (getEvenOrOdd === outputPoD) {
   document.querySelector('.winner').innerHTML = 'Hai vinto tu!';
 } else {
   document.querySelector('.winner').innerHTML ='Ha vinto il computer!';
 }
-*/
+
 
